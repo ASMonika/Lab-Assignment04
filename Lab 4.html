@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script type="text/javascript">
+	var str = prompt("Enter the Input",""); 
+	if(!(isNaN(str)))
+	{
+		var num,rev=0,remainder; num = parseInt(str);
+		while (num!=0) {
+		remainder = num%10; 
+		num = parseInt(num/10); 
+		rev = rev * 10 + remainder;
+        }
+	    alert("Reverse of "+str+" is "+rev)    
+	    
+	    if(str==rev)
+	   	alert("The Number is palindrome");    
+	}   
+	else
+	{
+		str = str.toUpperCase();
+		for(var i = 0; i < str.length; i++) 
+		{ 
+			var chr = str.charAt(i);
+			if(chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')break;
+		}
+		if ( i < str.length )
+	    alert ("The position of the left most vowel is "+(i+1));
+		
+		else
+	    alert ("No vowel found in the entered string");
+
+		str = str.toUpperCase();
+		for(var i = 0; i < str.length; i++) 
+		{ 
+			var chr = str.charAt(i);
+			if(chr == 'B' || chr == 'C' || chr == 'D' || chr == 'F' || chr == 'G' || chr == 'H' || chr == 'J' || chr == 'K' || chr == 'L' || chr == 'M' || 
+				chr == 'N' || chr == 'P' || chr == 'Q' || chr == 'R' || chr == 'S' || chr == 'T' || chr == 'V' || chr == 'W' || chr == 'X' || chr == 'Y' || 
+				chr == 'Z' )break;
+		}
+		if ( i < str.length )
+	    alert ("The position of the left most consonant is "+(i+1));
+		    
+		else
+	    alert ("No consonant found in the entered string");
+		    	
+	}
+</script>
+</body>
+</html>
